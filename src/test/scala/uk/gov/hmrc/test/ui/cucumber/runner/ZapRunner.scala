@@ -1,3 +1,8 @@
+/*
+ * Copyright 2021 HM Revenue & Customs
+ *
+ */
+
 package uk.gov.hmrc.test.ui.cucumber.runner
 
 import io.cucumber.junit.Cucumber
