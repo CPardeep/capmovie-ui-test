@@ -1,4 +1,4 @@
-@AddMovie
+@AddMovie @Test
 
 Feature: Adding a movie feature
 
