@@ -8,3 +8,8 @@ Feature: Adding a movie feature
     And I click Save and Continue
     Then I am redirected to the same page
 
+  Scenario: An Admin adds a movie poster
+    Given I am on the Add Movie Poster page
+    When I input the movie poster URL
+    And I click Save and Continue
+    Then I am redirected to the Add Movie Poster page
