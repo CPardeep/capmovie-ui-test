@@ -19,7 +19,6 @@ Feature: Adding a movie feature
 
   Scenario: An admin adds an age rating
     Given I am on the Add Age Rating page
-    When I select an age rating for the movie
-    And I click the next button
+    When I submit an age rating for the movie
     Then I am redirected to the Age Rating page
 

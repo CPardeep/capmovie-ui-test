@@ -11,17 +11,17 @@ class MovieRegAgeRatingStepDef extends BaseStepDef {
   Given("""I am on the Add Age Rating page""") { () =>
     MovieRegAgeRatingPage.goTo()
   }
-  When("""I select an age rating for the movie""") { () =>
+  When("""I submit an age rating for the movie""") { () =>
     MovieRegAgeRatingPage.ageRatingSelect.click()
+    MovieRegAgeRatingPage.clickContinue()
   }
-  And("""I click the next button""") { () =>
-    MovieRegAgeRatingPage.submitButton.click()
-  }
+
   Then("""I am redirected to the Age Rating page""") { () =>
     eventually {
       MovieRegAgeRatingPage.getTitle shouldBe MovieRegAgeRatingPage.title
     }
   }
+
 
 
 }

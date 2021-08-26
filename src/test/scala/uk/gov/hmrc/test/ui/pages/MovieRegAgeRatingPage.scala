@@ -13,6 +13,5 @@ object MovieRegAgeRatingPage extends BasePage {
   val title = "Age Rating"
 
   def ageRatingSelect: WebElement = driver.findElement(By.id("rated"))
-  def submitButton: WebElement = driver.findElement(By.id("next-button"))
 
 }
