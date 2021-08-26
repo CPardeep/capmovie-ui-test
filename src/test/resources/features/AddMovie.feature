@@ -16,3 +16,10 @@ Feature: Adding a movie feature
     Given I am on the Add Movie Plot page
     When I submit the movie plot
     Then I am redirected to the Add Movie Plot page
+
+  Scenario: An admin adds an age rating
+    Given I am on the Add Age Rating page
+    When I select an age rating for the movie
+    And I click the next button
+    Then I am redirected to the Age Rating page
+
