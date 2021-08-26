@@ -12,8 +12,9 @@ class MovieRegPosterStepDef extends BaseStepDef {
   Given("""I am on the Add Movie Poster page""") { () =>
     MovieRegPosterPage.goTo()
   }
-  When("""I input the movie poster URL""") { () =>
+  When("""I submit the movie poster URL""") { () =>
     MovieRegPosterPage.inputMoviePoster()
+    MovieRegPosterPage.clickContinue()
   }
   Then("""I am redirected to the Add Movie Poster page""") { () =>
     eventually {

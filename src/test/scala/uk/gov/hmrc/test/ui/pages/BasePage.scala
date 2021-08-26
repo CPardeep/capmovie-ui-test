@@ -5,6 +5,7 @@
 
 package uk.gov.hmrc.test.ui.pages
 
+import org.openqa.selenium.By
 import org.scalatest.matchers.should.Matchers
 import uk.gov.hmrc.test.ui.driver.BrowserDriver
 
@@ -15,7 +16,11 @@ trait BasePage extends Matchers with BrowserDriver {
     driver.navigate.to(url)
   }
 
-  def getTitle(): String = {
+  def getTitle: String = {
     driver.getTitle
+  }
+
+  def clickContinue(): Unit = {
+    driver.findElement(By.id("next-button")).click()
   }
 }
