@@ -13,7 +13,6 @@ object MovieRegPosterPage extends BasePage {
   val moviePosterURL = "TestURL"
 
   def posterInput: WebElement = driver.findElement(By.id("poster"))
-  def submitButton: WebElement = driver.findElement(By.id("next-button"))
 
   def inputMoviePoster(): Unit = {
     posterInput.sendKeys(moviePosterURL)

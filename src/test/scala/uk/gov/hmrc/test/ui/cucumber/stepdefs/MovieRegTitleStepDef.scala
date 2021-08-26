@@ -7,18 +7,15 @@ package uk.gov.hmrc.test.ui.cucumber.stepdefs
 
 import uk.gov.hmrc.test.ui.pages.MovieRegTitlePage
 
-class MovieRegNameStepDef extends BaseStepDef {
+class MovieRegTitleStepDef extends BaseStepDef {
 
   Given("""I am on the Add Movie Title page""") { () =>
     MovieRegTitlePage.goTo()
   }
 
-  When("""I input the movie Title""") { () =>
+  When("""I submit the movie Title""") { () =>
     MovieRegTitlePage.inputMovieTitle()
-  }
-
-  When("""I click Save and Continue""") { () =>
-    MovieRegTitlePage.submitButton.click()
+    MovieRegTitlePage.clickContinue()
   }
 
   Then("""I am redirected to the same page""") { () =>

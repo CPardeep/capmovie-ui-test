@@ -11,7 +11,7 @@ class HomePageStepDef extends BaseStepDef {
 
   Given("""I am on the homepage""") { () =>
     HomePage.goTo()
-    HomePage.getTitle() shouldBe "Home Page"
+    HomePage.getTitle shouldBe "Home Page"
   }
 
   Then("""I can view the list of movies""") { () =>

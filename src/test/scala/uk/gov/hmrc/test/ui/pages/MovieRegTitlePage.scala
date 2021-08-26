@@ -14,8 +14,6 @@ object MovieRegTitlePage extends BasePage {
 
   def titleInput: WebElement = driver.findElement(By.id("title"))
 
-  def submitButton: WebElement = driver.findElement(By.id("next-button"))
-
   def inputMovieTitle(): Unit = {
     titleInput.sendKeys(movieTitle)
   }
