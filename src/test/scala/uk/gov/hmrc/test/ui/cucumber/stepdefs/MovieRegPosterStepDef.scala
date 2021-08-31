@@ -5,7 +5,7 @@
 
 package uk.gov.hmrc.test.ui.cucumber.stepdefs
 
-import uk.gov.hmrc.test.ui.pages.MovieRegPosterPage
+import uk.gov.hmrc.test.ui.pages.{MovieRegAgeRatingPage, MovieRegPosterPage}
 
 class MovieRegPosterStepDef extends BaseStepDef {
 
@@ -16,9 +16,9 @@ class MovieRegPosterStepDef extends BaseStepDef {
     MovieRegPosterPage.inputMoviePoster()
     MovieRegPosterPage.clickContinue()
   }
-  Then("""I am redirected to the Add Movie Poster page""") { () =>
+  Then("""I am redirected to the Add Movie Age Rating page""") { () =>
     eventually {
-      MovieRegPosterPage.getTitle shouldBe MovieRegPosterPage.title
+      MovieRegPosterPage.getTitle shouldBe MovieRegAgeRatingPage.title
     }
   }
 }
