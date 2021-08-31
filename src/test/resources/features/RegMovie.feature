@@ -33,7 +33,7 @@ Feature: CRegistering a movie feature
     Then both genres are listed on the Genres Confirmation page
 
   Scenario: An Admin confirms list of genres
-    Given I am on the add genres confirmation page
-    And I confirm genres by clicking continue
+    Given I am on the Genres Confirmation page
+    When I confirm genres by clicking continue
     Then I am redirected to the Add Age Rating page
 
