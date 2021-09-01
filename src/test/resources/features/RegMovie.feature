@@ -2,25 +2,10 @@
 
 Feature: CRegistering a movie feature
 
-  Scenario: An admin adds a movie Title
+  Scenario: An admin adds a movie title
     Given I am on the Add Movie Title page
     When I submit the movie Title
-    Then I am redirected to the Add Movie Plot page
-
-  Scenario: An Admin adds a movie plot
-    Given I am on the Add Movie Plot page
-    When I submit the movie plot
-    Then I am redirected to the Add Movie Poster page
-
-  Scenario: An Admin adds a movie poster
-    Given I am on the Add Movie Poster page
-    When I submit the movie poster URL
-    Then I am redirected to the Add Movie Age Rating page
-
-  Scenario: An admin adds an age rating
-    Given I am on the Add Age Rating page
-    When I submit an age rating for the movie
-    Then I am redirected to the Age Rating page
+    Then I am redirected to the Add Genres page
 
   Scenario: An Admin adds one movie genre
     Given I am on the Add Movie Genres page
@@ -37,6 +22,21 @@ Feature: CRegistering a movie feature
     When I confirm genres by clicking continue
     Then I am redirected to the Add Age Rating page
 
+  Scenario: An admin adds an age rating
+    Given I am on the Add Age Rating page
+    When I submit an age rating for the movie
+    Then I am redirected to the Age Plot page
+
+  Scenario: An Admin adds a movie plot
+    Given I am on the Add Movie Plot page
+    When I submit the movie plot
+    Then I am redirected to the Add Movie Poster page
+
+  Scenario: An Admin adds a movie poster
+    Given I am on the Add Movie Poster page
+    When I submit the movie poster URL
+    Then I am redirected to the Add Movie Cast page
+
   Scenario: An Admin adds one cast member for a movie
     Given I am on the Add Movie Cast page
     When I submit a cast member
@@ -50,6 +50,6 @@ Feature: CRegistering a movie feature
   Scenario: An Admin confirms list of cast members
     Given I am on the Cast Confirmation page
     When I confirm the cast by clicking continue
-    #Then I am redirected to the __ page
+    #Then I am redirected to the Summary page
 
 

@@ -44,7 +44,7 @@ class MovieRegCastStepDef extends BaseStepDef {
     MovieRegCastConfPage.continueLink.click()
   }
 
-  /*Then("""I am redirected to the Add Movie Genres page""") { () =>
+/*  Then("""I am redirected to the Summary page""") { () =>
 
   }*/
 
