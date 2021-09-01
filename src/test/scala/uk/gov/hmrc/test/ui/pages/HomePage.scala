@@ -11,7 +11,7 @@ import java.util
 
 object HomePage extends BasePage {
 
-  val url: String = "http://localhost:9000/capmovie/home"
+  val url: String = "http://localhost:9001/capmovie/home"
   val title = "Home Page"
 
   def movieList: util.List[WebElement] = driver.findElements(By.className("movie-card"))
