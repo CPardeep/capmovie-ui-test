@@ -37,3 +37,19 @@ Feature: CRegistering a movie feature
     When I confirm genres by clicking continue
     Then I am redirected to the Add Age Rating page
 
+  Scenario: An Admin adds one cast member for a movie
+    Given I am on the Add Movie Cast page
+    When I submit a cast member
+    Then I am redirected to the Cast Confirmation page
+
+  Scenario: An Admin adds another cast member
+    Given I have already added one cast member for this movie
+    When I submit another cast member
+    Then both cast members are listed on the Cast Confirmation page
+
+  Scenario: An Admin confirms list of cast members
+    Given I am on the Cast Confirmation page
+    When I confirm the cast by clicking continue
+    #Then I am redirected to the __ page
+
+
