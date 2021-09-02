@@ -18,6 +18,6 @@ object HomePage extends BasePage {
 
   def checkListSize: Boolean = movieList.size > 2
 
-
+  def firstMovie: WebElement = driver.findElement(By.id("movie[0]"))
 
 }
