@@ -25,7 +25,7 @@ Feature: CRegistering a movie feature
   Scenario: An admin adds an age rating
     Given I am on the Add Age Rating page
     When I submit an age rating for the movie
-    Then I am redirected to the Age Plot page
+    Then I am redirected to the Plot page
 
   Scenario: An Admin adds a movie plot
     Given I am on the Add Movie Plot page
@@ -50,6 +50,12 @@ Feature: CRegistering a movie feature
   Scenario: An Admin confirms list of cast members
     Given I am on the Cast Confirmation page
     When I confirm the cast by clicking continue
-    #Then I am redirected to the Summary page
+    Then I am redirected to the Summary page
+
+  Scenario: An Admin confirms Movie details submission
+    Given I am on the Movie Summary page after entering valid details for a movie
+    When  I have confirmed the movie details match what has been inputted
+    And   I click the submit button
+    Then I am redirected to the Submission Confirmation Page
 
 

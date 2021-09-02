@@ -44,9 +44,9 @@ class MovieRegCastStepDef extends BaseStepDef {
     MovieRegCastConfPage.continueLink.click()
   }
 
-/*  Then("""I am redirected to the Summary page""") { () =>
+  Then("""I am redirected to the Summary page""") { () =>
 
-  }*/
+  }
 
 
 }
