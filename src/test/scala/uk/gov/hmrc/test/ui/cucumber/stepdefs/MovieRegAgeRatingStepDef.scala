@@ -16,7 +16,7 @@ class MovieRegAgeRatingStepDef extends BaseStepDef {
     MovieRegAgeRatingPage.clickContinue()
   }
 
-  Then("""I am redirected to the Age Plot page""") { () =>
+  Then("""I am redirected to the Plot page""") { () =>
     eventually {
       MovieRegAgeRatingPage.getTitle shouldBe MovieRegPlotPage.title
     }
