@@ -14,9 +14,8 @@ object MovieRegCastConfPage extends BasePage {
   val title = "Cast Confirmation Page"
 
   def addAnotherButton: WebElement = driver.findElement(By.linkText("Add another cast member"))
-  def continueLink: WebElement = driver.findElement(By.linkText("Continue"))
-
-  def castList: util.List[WebElement] = driver.findElements(By.className("movie-card"))
+  def removeCast: WebElement = driver.findElement(By.cssSelector(".govuk-summary-list__row:first-child>dd>a"))
+  def castList: util.List[WebElement] = driver.findElements(By.className("movie"))
 
   def getCastCount: Int = castList.size
 

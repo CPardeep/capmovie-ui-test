@@ -21,7 +21,7 @@ class MovieRegSummaryStepDef extends BaseStepDef {
     MovieRegSummaryPage.getMovieAgeRating.getText shouldBe "U"
     MovieRegSummaryPage.getMoviePlot.getText shouldBe "Test Plot"
     MovieRegSummaryPage.getMoviePoster.getText shouldBe "TestURL"
-    MovieRegSummaryPage.getMovieCast.getText shouldBe "Test Cast1Test Cast2"
+    MovieRegSummaryPage.getMovieCast.getText shouldBe "Test Cast2"
 
   }
 

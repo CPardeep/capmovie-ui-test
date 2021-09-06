@@ -53,6 +53,12 @@ Feature: CRegistering a movie feature
     When I submit another cast member
     Then both cast members are listed on the Cast Confirmation page
 
+  Scenario: An admin removes a cast member
+    Given I am on the Cast Confirmation page with two genres
+    When I remove a cast member
+    Then there should be one cast member listed
+    And I remain on the Cast Confirmation Page
+
   Scenario: An Admin confirms list of cast members
     Given I am on the Cast Confirmation page
     When I confirm the cast by clicking continue

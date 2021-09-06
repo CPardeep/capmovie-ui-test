@@ -5,7 +5,7 @@
 
 package uk.gov.hmrc.test.ui.cucumber.stepdefs
 
-import uk.gov.hmrc.test.ui.pages.{MovieRegCastConfPage, MovieRegCastPage, MovieRegPosterPage}
+import uk.gov.hmrc.test.ui.pages.{MovieRegCastConfPage, MovieRegCastPage, MovieRegSummaryPage}
 
 class MovieRegCastStepDef extends BaseStepDef {
 
@@ -36,16 +36,31 @@ class MovieRegCastStepDef extends BaseStepDef {
     MovieRegCastConfPage.getCastCount shouldBe 2
   }
 
+  Given("""I am on the Cast Confirmation page with two genres""") { () =>
+  }
+
+  When("""I remove a cast member""") { () =>
+    MovieRegCastConfPage.removeCast.click()
+  }
+
+  Then("""there should be one cast member listed""") { () =>
+    MovieRegCastConfPage.getCastCount shouldBe 1
+  }
+
+  And("""I remain on the Cast Confirmation Page""") { () =>
+    MovieRegCastConfPage.getTitle shouldBe MovieRegCastConfPage.title
+  }
+
   Given("""I am on the Cast Confirmation page""") { () =>
 
   }
 
   When("""I confirm the cast by clicking continue""") { () =>
-    MovieRegCastConfPage.continueLink.click()
+    MovieRegCastConfPage.clickContinue()
   }
 
   Then("""I am redirected to the Summary page""") { () =>
-
+    MovieRegSummaryPage.getTitle shouldBe MovieRegSummaryPage.title
   }
 
 
