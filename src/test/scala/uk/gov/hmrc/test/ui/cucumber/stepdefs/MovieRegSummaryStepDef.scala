@@ -17,7 +17,7 @@ class MovieRegSummaryStepDef extends BaseStepDef {
 
   When("""I have confirmed the movie details match what has been inputted""") { () =>
     MovieRegSummaryPage.getMovieTitle.getText shouldBe "TestTitle"
-    MovieRegSummaryPage.getMovieGenres.getText shouldBe "genre1genre2"
+    MovieRegSummaryPage.getMovieGenres.getText shouldBe "genre2"
     MovieRegSummaryPage.getMovieAgeRating.getText shouldBe "U"
     MovieRegSummaryPage.getMoviePlot.getText shouldBe "Test Plot"
     MovieRegSummaryPage.getMoviePoster.getText shouldBe "TestURL"
