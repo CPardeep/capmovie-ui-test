@@ -17,6 +17,12 @@ Feature: CRegistering a movie feature
     When I submit another movie genre
     Then both genres are listed on the Genres Confirmation page
 
+  Scenario: An admin removes a movie genre
+    Given I am on the Genres Confirmation page with two genres
+    When I remove a genre
+    Then there should be one genre left
+    And I remain on the same page
+
   Scenario: An Admin confirms list of genres
     Given I am on the Genres Confirmation page
     When I confirm genres by clicking continue

@@ -35,6 +35,22 @@ class MoveRegGenresStepDef extends BaseStepDef {
     MovieRegGenresConfPage.getGenresCount shouldBe 2
   }
 
+  Given("""I am on the Genres Confirmation page with two genres""") { () =>
+
+  }
+
+  When("""I remove a genre""") { () =>
+    MovieRegGenresConfPage.removeGenre.click()
+  }
+
+  Then("""there should be one genre left""") { () =>
+    MovieRegGenresConfPage.getGenresCount shouldBe 1
+  }
+
+  And("""I remain on the same page""") { () =>
+    MovieRegGenresConfPage.getTitle shouldBe MovieRegGenresConfPage.title
+  }
+
   Given("""I am on the Genres Confirmation page""") { () =>
 
   }
@@ -46,4 +62,6 @@ class MoveRegGenresStepDef extends BaseStepDef {
   Then("""I am redirected to the Add Age Rating page""") { () =>
     MovieRegAgeRatingPage.getTitle shouldBe MovieRegAgeRatingPage.title
   }
+
+
 }

@@ -20,4 +20,6 @@ object HomePage extends BasePage {
 
   def firstMovie: WebElement = driver.findElement(By.id("movie[0]"))
 
+
+
 }

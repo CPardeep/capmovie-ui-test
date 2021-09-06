@@ -15,9 +15,11 @@ object MovieRegGenresConfPage extends BasePage {
   val title = "Genres Confirmation Page"
 
   def addAnotherButton: WebElement = driver.findElement(By.id("add-another"))
+  def removeGenre: WebElement = driver.findElement(By.id("genre[0]"))
 
   def genresList: util.List[WebElement] = driver.findElements(By.className("genre"))
 
   def getGenresCount: Int = genresList.size
+
 
 }
