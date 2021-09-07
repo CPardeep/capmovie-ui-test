@@ -12,4 +12,5 @@ object ViewOnePage extends BasePage {
   val title: String = "The Navigator"
 
   def movieName: WebElement = driver.findElement(By.id("title"))
+  def deleteButton = driver.findElement(By.id("delete"))
 }
