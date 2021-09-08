@@ -64,10 +64,18 @@ Feature: CRegistering a movie feature
     When I confirm the cast by clicking continue
     Then I am redirected to the Summary page
 
+  Scenario: An Admin edits movie details from the summary page
+    Given I am on the Movie Summary page after entering valid details for a movie
+    When I click the change link for Movie Title
+    And I am redirected to the Movie Title page
+    And I update the Movie Title
+    Then I am redirected to the Summary Page where I can see the updated movie title
+
   Scenario: An Admin confirms Movie details submission
     Given I am on the Movie Summary page after entering valid details for a movie
     When  I have confirmed the movie details match what has been inputted
     And   I click the submit button
     Then I am redirected to the Submission Confirmation Page
+
 
 

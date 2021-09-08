@@ -8,7 +8,7 @@ package uk.gov.hmrc.test.ui.pages
 import org.openqa.selenium.{By, WebElement}
 
 object MovieRegPlotPage extends BasePage {
-  val url: String = "http://localhost:9000/capmovie/movie-plot"
+  val url: String = "http://localhost:9000/capmovie/movie-plot/false"
   val title = "Add a Plot"
   val moviePlot = "Test Plot"
 

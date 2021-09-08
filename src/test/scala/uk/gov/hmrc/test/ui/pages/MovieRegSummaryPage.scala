@@ -9,7 +9,7 @@ import org.openqa.selenium.{By, WebElement}
 
 object MovieRegSummaryPage extends BasePage {
 
-  val url: String = "http://localhost:9000/capmovie/summary"
+  val url: String = "http://localhost:9000/capmovie/summary/false"
   val title = "Summary"
   val confTitle = "Add a Movie Success"
 
@@ -19,4 +19,5 @@ object MovieRegSummaryPage extends BasePage {
   def getMoviePlot: WebElement = driver.findElement(By.id("plot-value"))
   def getMoviePoster: WebElement = driver.findElement(By.id("poster-value"))
   def getMovieCast: WebElement = driver.findElement(By.id("cast-value"))
+  def getMovieTitleChangeLink: WebElement = driver.findElement(By.id("change-title"))
 }
