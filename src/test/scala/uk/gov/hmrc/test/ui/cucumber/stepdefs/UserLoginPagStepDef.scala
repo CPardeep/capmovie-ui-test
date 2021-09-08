@@ -23,6 +23,6 @@ class UserLoginPagStepDef extends BaseStepDef {
   }
 
   Then("""I am navigated to the home page where a list movies are displayed""") { () =>
-    UserLogin.getTitle shouldBe HomePage.title
+    HomePage.getTitle shouldBe HomePage.title
   }
 }

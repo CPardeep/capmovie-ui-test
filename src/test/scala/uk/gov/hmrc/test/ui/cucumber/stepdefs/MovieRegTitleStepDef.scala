@@ -18,6 +18,13 @@ class MovieRegTitleStepDef extends BaseStepDef {
     MovieRegTitlePage.clickContinue()
   }
 
+  And ("""I update the Movie Title""") { () =>
+    MovieRegTitlePage.titleInput.clear()
+    MovieRegTitlePage.inputUpdatedMovieTitle()
+    MovieRegTitlePage.clickContinue()
+  }
+
+
   Then("""I am redirected to the Add Genres page""") { () =>
     eventually {
       MovieRegTitlePage.getTitle shouldBe MovieRegGenresPage.title
