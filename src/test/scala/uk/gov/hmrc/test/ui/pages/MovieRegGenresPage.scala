@@ -16,4 +16,5 @@ object MovieRegGenresPage extends BasePage{
   def inputMovieGenres(str: String): Unit = {
     genreInput.sendKeys(str)
   }
-}
+
+  }

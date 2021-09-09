@@ -17,4 +17,18 @@ class MoviePageStepDef extends BaseStepDef {
       ViewOnePage.getTitle shouldBe ViewOnePage.title
     }
   }
+  When("""I click update on a movie page""") { () =>
+    HomePage.firstMovie.click()
+    ViewOnePage.updateButton.click()
+  }
+
+  And("""the updated details are displayed""") { () =>
+    ViewOnePage.checkRatedValue("U")
+    ViewOnePage.checkTextExists("genre2") shouldBe true
+  }
+
+  Then("""I am redirected back to the movie page""") { () =>
+    ViewOnePage.getTitle shouldBe "The Land Beyond the Sunset"
+  }
+
 }

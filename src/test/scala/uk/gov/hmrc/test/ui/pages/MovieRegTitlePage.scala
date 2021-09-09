@@ -9,6 +9,7 @@ import org.openqa.selenium.{By, WebElement}
 
 object MovieRegTitlePage extends BasePage {
   val url: String = "http://localhost:9000/capmovie/movie-title/false"
+  val updateUrl: String = "http://localhost:9000/capmovie/update/MOV0002/title"
   val title = "Title Page"
   val movieTitle = "TestTitle"
   val updatedMovieTitle = "TestTitle1"

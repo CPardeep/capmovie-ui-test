@@ -12,5 +12,9 @@ object ViewOnePage extends BasePage {
   val title: String = "The Navigator"
 
   def movieName: WebElement = driver.findElement(By.id("title"))
-  def deleteButton = driver.findElement(By.id("delete"))
+  def deleteButton: WebElement = driver.findElement(By.id("delete"))
+  def updateButton: WebElement = driver.findElement(By.id("update"))
+
+  def checkRatedValue(rating: String): Boolean = driver.findElement(By.id("rated")).getText.contains(rating)
+  def checkTextExists(str: String): Boolean = driver.getPageSource.contains(str)
 }

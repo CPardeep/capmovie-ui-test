@@ -17,4 +17,6 @@ class HomePageStepDef extends BaseStepDef {
   Then("""I can view the list of movies""") { () =>
     HomePage.checkListSize shouldBe true
   }
+
+
 }

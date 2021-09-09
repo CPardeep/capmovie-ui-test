@@ -12,6 +12,8 @@ import uk.gov.hmrc.test.ui.driver.BrowserDriver
 trait BasePage extends Matchers with BrowserDriver {
   val url: String
 
+  def getUrl: String = driver.getCurrentUrl
+
   def goTo(): Unit = {
     driver.navigate.to(url)
   }
