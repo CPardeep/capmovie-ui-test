@@ -5,7 +5,7 @@
 
 package uk.gov.hmrc.test.ui.cucumber.stepdefs
 
-import uk.gov.hmrc.test.ui.pages.{MovieRegGenresPage, MovieRegPlotPage, MovieRegTitlePage}
+import uk.gov.hmrc.test.ui.pages.MovieRegTitlePage
 
 class MovieRegTitleStepDef extends BaseStepDef {
 
@@ -18,17 +18,25 @@ class MovieRegTitleStepDef extends BaseStepDef {
     MovieRegTitlePage.clickContinue()
   }
 
-  And ("""I update the Movie Title""") { () =>
+  And("""I update the Movie Title""") { () =>
     MovieRegTitlePage.titleInput.clear()
     MovieRegTitlePage.inputUpdatedMovieTitle()
     MovieRegTitlePage.clickContinue()
   }
 
-
-  Then("""I am redirected to the Add Genres page""") { () =>
+  Then("""I am redirected to the update title page""") { () =>
     eventually {
-      MovieRegTitlePage.getTitle shouldBe MovieRegGenresPage.title
+      MovieRegTitlePage.getTitle shouldBe MovieRegTitlePage.title
+      MovieRegTitlePage.getUrl shouldBe MovieRegTitlePage.updateUrl
     }
   }
+
+  Then("""the title input is pre-populated with the movie title""") { () =>
+    MovieRegTitlePage.titleInput.getAttribute("value") shouldBe "The Land Beyond the Sunset"
+  }
+
+  Given("""I am on the update title page""") { () =>
+  }
+
 
 }

@@ -5,7 +5,7 @@
 
 package uk.gov.hmrc.test.ui.cucumber.stepdefs
 
-import uk.gov.hmrc.test.ui.pages.{MovieRegPlotPage, MovieRegPosterPage}
+import uk.gov.hmrc.test.ui.pages.{MovieRegAgeRatingPage, MovieRegCastConfPage, MovieRegPlotPage, MovieRegPosterPage}
 
 class MovieRegPlotStepDef extends BaseStepDef {
 
@@ -22,6 +22,27 @@ class MovieRegPlotStepDef extends BaseStepDef {
     eventually {
       MovieRegPlotPage.getTitle shouldBe MovieRegPosterPage.title
     }
+  }
+
+  Then("""I am redirected to the Plot page""") { () =>
+    eventually {
+      MovieRegAgeRatingPage.getTitle shouldBe MovieRegPlotPage.title
+    }
+  }
+
+  Then("""I am redirected to the update plot page""") { () =>
+    eventually {
+      MovieRegPlotPage.getUrl shouldBe MovieRegPlotPage.updateUrl
+    }
+  }
+
+  Given("""I am on the update plot page""") { () =>
+  }
+
+  When("""I click continue on the plot, poster and cast confirmation page without making any changes""") { () =>
+    eventually(MovieRegPlotPage.clickContinue())
+    eventually(MovieRegPosterPage.clickContinue())
+    eventually(MovieRegCastConfPage.clickContinue())
   }
 
 }

@@ -6,7 +6,6 @@
 package uk.gov.hmrc.test.ui.pages
 
 import org.openqa.selenium.{By, WebElement}
-import uk.gov.hmrc.test.ui.pages.DeleteAreYouSurePage.driver
 
 object DeleteSuccessfulPage extends BasePage {
   val url: String = "http://localhost:9001/capmovie/delete/confirmed/MOV0001"

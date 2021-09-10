@@ -5,7 +5,7 @@
 
 package uk.gov.hmrc.test.ui.cucumber.stepdefs
 
-import uk.gov.hmrc.test.ui.pages.{MovieRegAgeRatingPage, MovieRegGenresConfPage, MovieRegGenresPage}
+import uk.gov.hmrc.test.ui.pages.{MovieRegGenresConfPage, MovieRegGenresPage}
 
 class MoveRegGenresStepDef extends BaseStepDef {
   Given("""I am on the Add Movie Genres page""") { () =>
@@ -22,7 +22,6 @@ class MoveRegGenresStepDef extends BaseStepDef {
   }
 
   Given("""I have already added one movie genre""") { () =>
-
   }
 
   When("""I submit another movie genre""") { () =>
@@ -36,7 +35,6 @@ class MoveRegGenresStepDef extends BaseStepDef {
   }
 
   Given("""I am on the Genres Confirmation page with two genres""") { () =>
-
   }
 
   When("""I remove a genre""") { () =>
@@ -52,15 +50,30 @@ class MoveRegGenresStepDef extends BaseStepDef {
   }
 
   Given("""I am on the Genres Confirmation page""") { () =>
-
   }
 
   Given("""I confirm genres by clicking continue""") { () =>
     MovieRegGenresConfPage.clickContinue()
   }
 
-  Then("""I am redirected to the Add Age Rating page""") { () =>
-    MovieRegAgeRatingPage.getTitle shouldBe MovieRegAgeRatingPage.title
+  Then("""I am redirected to the Add Genres page""") { () =>
+    eventually {
+      MovieRegGenresPage.getTitle shouldBe MovieRegGenresPage.title
+    }
+  }
+  Then("""I am redirected to the update genres confirmation page""") { () =>
+    MovieRegGenresConfPage.getUrl shouldBe MovieRegGenresConfPage.updateUrl
+  }
+
+  Given("""I am on the update genres confirmation page""") { () =>
+  }
+
+  When("""I click continue""") { () =>
+    MovieRegGenresConfPage.clickContinue()
+  }
+
+  Then("""the new genre is listed on the confirmation page""") { () =>
+    MovieRegGenresConfPage.getLastGenre shouldBe "genre2"
   }
 
 
