@@ -12,7 +12,6 @@ import java.util
 object MovieRegGenresConfPage extends BasePage {
 
   val url: String = "http://localhost:9000/capmovie/movie-genres/confirmation/false"
-  val updateUrl: String = "http://localhost:9000/capmovie/update/MOV0002/genre/confirmation"
   val title = "Genres Confirmation Page"
 
   def addAnotherButton: WebElement = driver.findElement(By.id("add-another"))

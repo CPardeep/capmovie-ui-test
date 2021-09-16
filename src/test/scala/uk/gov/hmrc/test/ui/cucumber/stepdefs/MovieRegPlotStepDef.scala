@@ -32,7 +32,7 @@ class MovieRegPlotStepDef extends BaseStepDef {
 
   Then("""I am redirected to the update plot page""") { () =>
     eventually {
-      MovieRegPlotPage.getUrl shouldBe MovieRegPlotPage.updateUrl
+      MovieRegPlotPage.getUrl should include regex MovieRegPlotPage.updateUrl
     }
   }
 
@@ -40,9 +40,9 @@ class MovieRegPlotStepDef extends BaseStepDef {
   }
 
   When("""I click continue on the plot, poster and cast confirmation page without making any changes""") { () =>
-    eventually(MovieRegPlotPage.clickContinue())
-    eventually(MovieRegPosterPage.clickContinue())
-    eventually(MovieRegCastConfPage.clickContinue())
+    MovieRegPlotPage.clickContinue()
+    MovieRegPosterPage.clickContinue()
+    MovieRegCastConfPage.clickContinue()
   }
 
 }

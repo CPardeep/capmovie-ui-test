@@ -16,10 +16,11 @@ object HomePage extends BasePage {
 
   def movieList: util.List[WebElement] = driver.findElements(By.className("movie-card"))
 
-  def checkListSize: Boolean = movieList.size > 2
+  def checkListSize: Boolean = movieList.size > 1
 
   def firstMovie: WebElement = driver.findElement(By.id("movie[0]"))
 
+  def lastMovie: WebElement = driver.findElement(By.cssSelector("#movie-container>div>div:last-of-type>p>a"))
 
 
 }
