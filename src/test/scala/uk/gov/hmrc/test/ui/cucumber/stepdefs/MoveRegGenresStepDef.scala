@@ -62,7 +62,7 @@ class MoveRegGenresStepDef extends BaseStepDef {
     }
   }
   Then("""I am redirected to the update genres confirmation page""") { () =>
-    MovieRegGenresConfPage.getUrl shouldBe MovieRegGenresConfPage.updateUrl
+    MovieRegGenresConfPage.getUrl should include regex MovieRegGenresConfPage.updateUrl
   }
 
   Given("""I am on the update genres confirmation page""") { () =>

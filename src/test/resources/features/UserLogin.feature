@@ -1,5 +1,5 @@
 @Test
-Feature: ELogging in as an user
+Feature: FLogging in as an user
 
   Scenario: Logging in an user
     Given that I am on the user Login Page

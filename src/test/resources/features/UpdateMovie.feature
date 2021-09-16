@@ -25,7 +25,7 @@ Feature: DUpdate Movie Details
 
   Scenario: An admin updates a movie's rating
     Given I am on the update age rating page
-    When I submit an age rating for the movie
+    When I update the age rating for the movie
     Then I am redirected to the update plot page
 
   Scenario: An admin makes no changes to the movie plot, poster and cast

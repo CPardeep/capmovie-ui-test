@@ -16,9 +16,3 @@ Feature: BView list of movies
     When I click on a movie link
     Then I am redirected to that movies page
 
-    Scenario: Deleting a movie
-      Given I am on the homepage
-      When I click on a movie link
-      And I click delete
-      And I click confirm
-      Then I will be on the delete success page

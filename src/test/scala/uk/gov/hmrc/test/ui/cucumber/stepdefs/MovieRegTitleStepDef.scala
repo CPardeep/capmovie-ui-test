@@ -14,8 +14,10 @@ class MovieRegTitleStepDef extends BaseStepDef {
   }
 
   When("""I submit the movie Title""") { () =>
-    MovieRegTitlePage.inputMovieTitle()
-    MovieRegTitlePage.clickContinue()
+    eventually {
+      MovieRegTitlePage.inputMovieTitle()
+      MovieRegTitlePage.clickContinue()
+    }
   }
 
   And("""I update the Movie Title""") { () =>
@@ -27,12 +29,12 @@ class MovieRegTitleStepDef extends BaseStepDef {
   Then("""I am redirected to the update title page""") { () =>
     eventually {
       MovieRegTitlePage.getTitle shouldBe MovieRegTitlePage.title
-      MovieRegTitlePage.getUrl shouldBe MovieRegTitlePage.updateUrl
+      MovieRegTitlePage.getUrl should include regex MovieRegTitlePage.updateUrl
     }
   }
 
   Then("""the title input is pre-populated with the movie title""") { () =>
-    MovieRegTitlePage.titleInput.getAttribute("value") shouldBe "The Land Beyond the Sunset"
+    MovieRegTitlePage.titleInput.getAttribute("value") shouldBe MovieRegTitlePage.updatedMovieTitle
   }
 
   Given("""I am on the update title page""") { () =>

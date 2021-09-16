@@ -11,6 +11,7 @@ import uk.gov.hmrc.test.ui.driver.BrowserDriver
 
 trait BasePage extends Matchers with BrowserDriver {
   val url: String
+  val updateUrl: String = "http://localhost:9000/capmovie/update/"
 
   def getUrl: String = driver.getCurrentUrl
 
